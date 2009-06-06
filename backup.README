@@ -1,0 +1,54 @@
+NAME
+    fireagle-tools/backup.pl - backup your current FireEagle location to
+    local file
+
+SYNOPSIS
+     fireeagle-tools/backup.pl -c /path/to/configfile.cfg
+
+DESCRIPTION
+    Backup your current FireEagle location to local file, using the
+    FireEagle API. Files are written to a nested YYYY/MM/DD directory tree.
+
+    For example:
+
+      /home/youarehere/fireeagle/2009/06/06:
+      used 8 available 1436916
+      drwx------  2 youarehere  users   512 Jun  6 09:35 .
+      drwx------  3 youarehere  users   512 Jun  6 09:33 ..
+      -rw-------  1 youarehere  users  3903 Jun  6 09:35 200906060931330700.xml
+
+    It's the sort of thing you'd run out of cron, or something. That's your
+    business.
+
+VERSION
+    1.0
+
+DATE
+    $Date: 2009/06/06 16:45:08 $
+
+AUTHOR
+    Aaron Straup Cope
+
+EXAMPLE CONFIG FILE
+     [fireeagle]
+     consumer_key=CONSUMER_KEY
+     consumer_secret=CONSUMER_SECRET
+     access_token=ACCESS_TOKEN
+     access_token_secret=ACCESS_TOKEN_SECRET
+
+     [fireeagle_backup]
+     directory=/home/youarehere/fireeagle
+
+REQUIREMENTS
+    Net::FireEagle
+
+    XML::XPath
+
+    Config::Simple
+
+LICENSE
+    Copyright (c) 2009 Aaron Straup Cope. All Rights Reserved.
+
+    This is free software. You may redistribute it and/or modify it under
+    the same terms as Perl itself.
+
